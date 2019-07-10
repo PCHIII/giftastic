@@ -1,0 +1,45 @@
+
+body {
+    background-color:greenyellow;
+    
+}
+
+h1 {
+    font-family: 'Black Ops One', cursive;
+    font-size: 60px;
+    background-color:yellow;
+    text-align: center;
+    border-radius: 50%;
+    padding: 22px;
+    border: thick double white;
+    /* border-color: black; */ */ */
+}
+}
+.rating{
+    
+}
+
+p {
+    text-transform: uppercase;
+    padding-left: 1%;
+    background-color:blue; 
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+.gifDiv {
+    margin-right: 10px;
+}
+
+.row {
+    padding-top: 15px;
+    /* margin-right: 0; */
+}
+
+#gif-form {
+    float: right;
+}
+
+/* input[type=text] {
+    width: auto;
+ }  */
