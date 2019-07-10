@@ -59,7 +59,11 @@ function showButtons() {
 
     for (var i = 0; i < sports.length; i++) {
         var gifButton = $("<button>");
-        gifButton.attr("type", "button").attr("class", "btn btn-dark m-1 Osport").text(sports[i]).attr("data-Osport", sports[i]).attr("id", "gif-button");
+        gifButton.attr("type", "button")
+        gifButton.attr("class", "btn btn-dark m-1 Osport")
+        gifButton.text(sports[i])
+        gifButton.attr("data-Osport", sports[i])
+        gifButton.attr("id", "gif-button");
         $("#gif-buttons").append(gifButton);
     }
 }
