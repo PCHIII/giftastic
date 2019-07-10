@@ -55,7 +55,7 @@ function showButtons() {
     for (var i = 0; i < sports.length; i++) {
         var gifButton = $("<button>");
         gifButton.attr("type", "button")
-        gifButton.attr("class", "btn btn-success m-1 Osport")
+        gifButton.attr("class", "btn btn-info m-1 Osport")
         gifButton.text(sports[i])
         gifButton.attr("data-Osport", sports[i])
         gifButton.attr("id", "gif-button");
