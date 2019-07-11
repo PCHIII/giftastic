@@ -1,12 +1,13 @@
 
 // using giphy api, create a search function for sports that returns 10 gifs
-// create 10 or so
+// create 10 buttons with sports already choosen.
+// add for placeholder (form) user to create a new sport button, that adds to the search array.
 
 
 
 
 
-var sports = ["Volleyball", "Hockey", "Dressages", "Nascar", "Curling",  "Wrestling", "Gymnastics", "Golf", "Tennis", "Skiing", "Speed Skating"];
+var sports = ["Volleyball", "Hockey", "Football", "Nascar", "Baseball",  "Boxing", "Gymnastics", "Golf", "Tennis", "Basketball", "Surfing", "Bowling"];
 
 function displayGif() {
     var Osport = $(this).attr("data-Osport");
