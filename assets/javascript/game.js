@@ -12,7 +12,7 @@ var sports = ["Volleyball", "Hockey", "Football", "Nascar", "Baseball",  "Boxing
 function displayGif() {
     var Osport = $(this).attr("data-Osport");
 
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + Osport + "&api_key=6Mf8kelUSBecuyyorodHx74jiGumtjs7&limit=10"
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=funny+" + Osport + "&api_key=6Mf8kelUSBecuyyorodHx74jiGumtjs7&limit=10"
 
     $.ajax({
         url: queryURL,
@@ -34,7 +34,7 @@ function displayGif() {
             Image.attr("data-still", results[i].images.fixed_height_still.url);
             Image.attr("data-animate", results[i].images.fixed_height.url);
             Image.attr("data-state", "still");
-
+// get rating from string
             var ratingPG = $("<p>")
             ratingPG.text(" rating: " + results[i].rating)
             ratingPG.attr("class", "rating");
@@ -74,12 +74,13 @@ function showButtons() {
     }
 }
 //  click button to add a created button and add to json search, post to page.
-$("#add-gif").on("click", function() {
-    // event.preventDefault();
-    var Osport = $("#gif-input").val().trim();
+// event.preventDefault
+$("#add-gif").on("click", function(e) {
+    e.preventDefault();
+    Osport = $("#gif-input").val();
     sports.push(Osport);
     showButtons();
-    // console.log(event)
+    // console.log(e)
 });
 
 $(document).on("click", ".Osport", displayGif);
