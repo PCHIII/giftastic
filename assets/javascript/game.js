@@ -1,4 +1,12 @@
-var sports = ["Badminton", "Handball", "Dressages", "Bobsleigh", "Curling", "Speed Skating", "Long Jump", "Gymnastics", "Ping-Pong", "Hockey"];
+
+// using giphy api, create a search function for sports that returns 10 gifs
+// create 10 or so
+
+
+
+
+
+var sports = ["Volleyball", "Hockey", "Dressages", "Nascar", "Curling",  "Wrestling", "Gymnastics", "Golf", "Tennis", "Skiing", "Speed Skating"];
 
 function displayGif() {
     var Osport = $(this).attr("data-Osport");
@@ -14,6 +22,8 @@ function displayGif() {
 
         // create variable to grab data from api
         var results = response.data;
+
+        // grab stills in pulled data
 
         for (var i = 0; i <= results.length; i++) {
             var gifDiv = $("<div>").attr("class", "gifDiv float-md-left");
@@ -34,7 +44,7 @@ function displayGif() {
 
     });
 }
-// create click on function for switching between animate and still
+// create on click function for switching between animate and still
 $(document).on("click", ".gif", function() {
     var state = $(this).attr("data-state");
 
@@ -62,12 +72,13 @@ function showButtons() {
         $("#gif-buttons").append(gifButton);
     }
 }
-
-$("#add-gif").on("click", function(event) {
-    event.preventDefault();
+//  click button to add a created button and add to json search, post to page.
+$("#add-gif").on("click", function() {
+    // event.preventDefault();
     var Osport = $("#gif-input").val().trim();
     sports.push(Osport);
     showButtons();
+    // console.log(event)
 });
 
 $(document).on("click", ".Osport", displayGif);
