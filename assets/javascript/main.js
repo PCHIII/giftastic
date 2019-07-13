@@ -1,6 +1,6 @@
 // using giphy api, create a search function for sports that returns 10 gifs
-// create 10 buttons with sports already choosen.
-// add for placeholder (form) user to create a new sport button, that adds to the search array.
+// create 10 buttons with sports already chosen.
+// add for placeholder (form) user to create a new sport button, that appends to the array of buttons.
 
 $(document).ready(function () {
 
@@ -10,18 +10,23 @@ $(document).ready(function () {
     $("#gif-buttons").hide(300).show(3000);
     $("#gif-form").hide(300).show(4000);
     $("#logo").hide(300).slideDown(1000);
+    $("#logo_giphy").hide(300).fadeIn(6000);
+
+    // create a function for ajax call/ response for data from api
 
     function displayGif() {
         var oSport = $(this).attr("data-oSport");
 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + oSport + "&api_key=6Mf8kelUSBecuyyorodHx74jiGumtjs7&limit=10"
 
+        // var queryURL = "https://api.giphy.com/v1/gifs/random?" + oSport + "&api_key=6Mf8kelUSBecuyyorodHx74jiGumtjs7&limit=10"
+
             $.ajax({
                 url: queryURL,
                 method: "GET"
             })
-            .then(function (response) {
-                console.log.queryURL;
+            .done(function (response) {
+                console.log(queryURL);
                 console.log(response);
 
             // storing the data from the AJAX request in the results variable
