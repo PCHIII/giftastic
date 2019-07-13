@@ -46,32 +46,22 @@ p {
 
 
 
-/* input[type=text] {
-    width: auto;
- }  */
-
  @media screen and (max-width: 768px) {
 
     .gif {
         width: 100%;
-        /* height: auto; */
-        
+    
     }
 
     
-    
-    /* #add-gif {
-        margin-left: 15px; 
-        margin-top: 5px;
-    } */
-
     #gif-input {
         width: 100%;
+
     }
+
     .row {
-        /* clear: right; */
         float: left;
         margin-left: 5px;
           
     }
-    }
+}
