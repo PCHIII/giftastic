@@ -12,6 +12,9 @@ $(document).ready(function () {
     $("#logo").hide(300).slideDown(1000);
     $("#logo_giphy").hide(300).fadeIn(6000);
 
+
+    
+
     // create a function for ajax call/ response for data from api
 
     function displayGif() {
