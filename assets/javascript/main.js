@@ -19,7 +19,7 @@ $(document).ready(function () {
         var oSport = $(this).attr("data-oSport");
 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + oSport + "&api_key=6Mf8kelUSBecuyyorodHx74jiGumtjs7&limit=10"
-
+        
             $.ajax({
                 url: queryURL,
                 method: "GET"
